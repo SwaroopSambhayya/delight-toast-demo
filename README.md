@@ -1,8 +1,14 @@
 # delightful_toast_app
 
-A new Flutter project.
+A demo of delightful toast bar
 
 ## Getting Started
+
+
+
+https://github.com/SwaroopSambhayya/delight-toast-demo/assets/31922733/7e4d3189-1401-459c-8c89-2021203d42f8
+
+
 
 This project is a starting point for a Flutter application.
 
