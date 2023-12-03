@@ -46,7 +46,11 @@ class RawDelightToastState extends State<RawDelightToast> {
       },
       effects: [
         SlideEffect(
-            begin: const Offset(0, 2),
+            begin: Offset(
+                0,
+                widget.snackbarPosition == DelightSnackbarPosition.bottom
+                    ? 2
+                    : -2),
             end: Offset.zero,
             duration: Duration(
                 milliseconds: 2 * widget.animationDuration.inMilliseconds),
@@ -76,8 +80,12 @@ class RawDelightToastState extends State<RawDelightToast> {
       duration: Duration(milliseconds: widget.animationDuration.inMilliseconds),
       key: positionedKey,
       curve: Curves.easeOutBack,
-      top: widget.snackbarPosition == DelightSnackbarPosition.top ? 0 : null,
-      bottom: widget.getPosition() + 70,
+      top: widget.snackbarPosition == DelightSnackbarPosition.top
+          ? widget.getPosition() + 70
+          : null,
+      bottom: widget.snackbarPosition == DelightSnackbarPosition.bottom
+          ? widget.getPosition() + 70
+          : null,
       left: 0,
       right: 0,
       child: Material(
